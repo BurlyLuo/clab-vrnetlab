@@ -84,9 +84,18 @@ class Ubuntu_vm(vrnetlab.VM):
             cfg_file.write("    lock_passwd: false\n")
             cfg_file.write("ssh_pwauth: true\n")
             cfg_file.write("disable_root: false\n")
-            cfg_file.write("timezone: Europe/Berlin\n")
+            cfg_file.write("timezone: Asia/Shanghai\n")
+            # set root passwd
+            cfg_file.write("chpasswd:\n")
+            cfg_file.write("  list: |\n")
+            cfg_file.write("    root:hive\n")
+            cfg_file.write("  expire: false\n")
+
             # Disable cloud-init for the subsequent boots
             cfg_file.write("runcmd:\n")
+            cfg_file.write("  - sed -i 's/^#*PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config\n")
+            cfg_file.write("  - sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config\n")
+            cfg_file.write("  - systemctl restart ssh\n")
             cfg_file.write("  - touch /etc/cloud/cloud-init.disabled\n")
 
         with open("/network_config.yaml", "w") as net_cfg_file:
