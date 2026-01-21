@@ -5,6 +5,10 @@ To download a compatible image of the Ubuntu VM execute the [download.sh](downlo
 Once the qcow2 image is downloaded, build the container with the following command:
 
 ```bash
+make
+```
+Otherwise with the following command:
+```bash
 make build
 ```
 
