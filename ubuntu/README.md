@@ -5,7 +5,7 @@ To download a compatible image of the Ubuntu VM execute the [download.sh](downlo
 Once the qcow2 image is downloaded, build the container with the following command:
 
 ```bash
-make
+make build
 ```
 
 The resulting container will be tagged as `vrnetlab/vr-ubuntu:<version>`, e.g. `vrnetlab/vr-ubuntu:jammy`.
