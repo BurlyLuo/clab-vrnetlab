@@ -9,6 +9,10 @@ RUN apt-get update -qy \
    python3-ipy \
    qemu-kvm \
    qemu-utils \
+   telnet \
+   tcpdump \
+   lrzsz \
+   net-tools \
    socat \
    ssh \
    sshpass \
