@@ -12,7 +12,7 @@ import vrnetlab
 
 CONFIG_FILE = "/config/config_db.json"
 DEFAULT_USER = "admin"
-DEFAULT_PASSWORD = "YourPaSsWoRd"
+DEFAULT_PASSWORD = "asteros"
 
 
 def handle_SIGCHLD(_signal, _frame):
