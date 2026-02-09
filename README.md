@@ -159,6 +159,7 @@ routing products:
 * OpenBSD
 * FreeBSD
 * Ubuntu
+* SONiC
 
 The rest are left untouched and can be contributed back by the community.
 
